@@ -26,3 +26,10 @@ def show_inventory(game_state):
         return f"Inventory: {', '.join(game_state['inventory'])}"
     else:
         return "Inventory is empty."
+    
+if __name__ == "__main__":
+    test_game_state = {'inventory': set()}
+    add_item(test_game_state, 'key')
+    print(show_inventory(test_game_state))
+    add_item(test_game_state, 'book')
+    print(show_inventory(test_game_state))

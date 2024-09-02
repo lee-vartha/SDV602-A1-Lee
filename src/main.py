@@ -1,9 +1,16 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import PySimpleGUI as sg
+
+from src import load_image
 from src import game_data
 from src.command import parse_command
-from src.utils import load_image
 
-    
+
+
 def make_a_window(game_state):
     """
     Creates a game window
@@ -35,7 +42,8 @@ if __name__ == "__main__":
         if event ==  'Enter': 
                 command_result = parse_command(values['-IN-'], game_state)
                 window['-OUTPUT-'].update(command_result)
-                window['-IMG-'].update(load_image[game_state['current_room']]['description'])
+                window['-IMG-'].update(load_image(f"{game_state['current_room'].lower()}.png"))
                 break
              
+
     window.close()
