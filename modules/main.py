@@ -263,11 +263,11 @@ if __name__ == "__main__":
                     window['-IMG-'].update(game_places['Foyer']['Image'], size=(180, 180))
                     continue
 
-                elif direction == 'fight' and game_state == 'Library':
+                elif direction == 'fight' and game_state == 'Library': # if they go into the library (where monster is) and choose to 'fight'
                     fight_result = monster_fight.start_fight()
                     if fight_result is None:
                         fight_result = "The fight ended with no result"
-                    window['-OUTPUT-'].update(fight_result + '\n\n' + show_current_place())
+                    window['-OUTPUT-'].update(fight_result + '\n\n' + show_current_place()) # updates the window with the fight result
                     inventory_text = inventory.show_inventory()
                     window['-INVENTORY-'].update(inventory_text)
                     status_text = status.show_status()

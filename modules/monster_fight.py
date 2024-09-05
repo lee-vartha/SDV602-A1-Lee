@@ -123,8 +123,8 @@ class MonsterFight:
             Returns:
                 tuple: a tuple containing the damage taken by the player and monster, and an optional message
         """
-        # based on a specific item in their inventory
-        if item not in ['Teaspoon', 'Pillow', 'Lint']:
+        if item not in ['Teaspoon', 'Pillow', 'Lint']:         # based on a specific item in their inventory
+
             self.player_health = 0
             self.status.update_health(self.player_health)
             return 0,0, "That was kind of a bad choice...\nYou had nothing to fight with...\nyou die..\n\nPress the 'Exit' button."
@@ -132,13 +132,10 @@ class MonsterFight:
         # adjusts the players attack based on whatever the item is
         if item == 'Teaspoon':
             self.player_attack = 20
-            return self.calculate_player_attack(), self.calculate_monster_attack(), f"\nThe little spoon helped!"
         elif item == 'Pillow':
             self.player_attack = 5         
-            return self.calculate_player_attack(), self.calculate_monster_attack(), f"\nYour pillow somehow helped you!"
         elif item == 'Lint':
             self.player_attack = 2
-            return self.calculate_player_attack(), self.calculate_monster_attack(), f"\nYour lint didn't help you much..."
 
         # use default attacks if the item isnt recognised
         player_attack = self.calculate_player_attack()
@@ -184,7 +181,7 @@ class MonsterFight:
 
             result = f"You used the {item}.\nMonsters health is now {self.monster_health}\n\n"
             result += f"The monster attacked you!\nThat hurt."
-            result += f"\nSay 'Fight' to fight again!"
+            result += f"\nSay 'Fight' to fight again!"  # just an indicator so the user knows what to say next
 
             if self.monster_health <= 0:
                 result += "\nYou defeated the monster!"
