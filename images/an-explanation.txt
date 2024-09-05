@@ -1,0 +1,3 @@
+The images in here are AI generated for the sake of aesthetic in the game 
+- it does not affect my code, however aligns with the description so the game looks more cohesive.
+https://deepai.org/machine-learning-model/text2img <= this is the link to the website I have used
