@@ -1,7 +1,7 @@
 # SDV602-A1-Lee
 # SDV602-A1-Lee
 Haunted house is a text=based adventure game where players go around a haunted house till they find the monster.
-
+This is the link to the language comparison video: https://livenmitac-my.sharepoint.com/:v:/g/personal/lee-vartha_live_nmit_ac_nz/ERgnLQNDA4lBoePEY9hpKC0BFOGBowWQvUsKJ3GB0o2eSQ
 prerequesites:
 - python 3.x
 - venv
